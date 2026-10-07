@@ -1,0 +1,504 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Yegua | Menú Digital</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f3e2c2;
+    color:#3b2114;
+}
+
+.encabezado{
+    text-align:center;
+    background:#4b2818;
+    color:#f8dfaa;
+    padding:30px 15px;
+    border-bottom:7px solid #b47735;
+}
+
+.logo-yegua{
+    font-size:75px;
+}
+
+.encabezado h1{
+    font-family:Georgia,serif;
+    font-size:48px;
+    letter-spacing:5px;
+}
+
+.encabezado p{
+    margin-top:8px;
+    font-size:17px;
+}
+
+.categorias{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    padding:18px 10px;
+    background:#d1a76d;
+}
+
+.categorias button{
+    border:2px solid #4b2818;
+    background:#f8dfaa;
+    color:#4b2818;
+    padding:10px 16px;
+    border-radius:20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.categorias button:hover{
+    background:#4b2818;
+    color:#f8dfaa;
+}
+
+.menu{
+    width:95%;
+    max-width:900px;
+    margin:25px auto;
+    display:grid;
+    gap:22px;
+}
+
+.producto{
+    display:flex;
+    background:#fff8e9;
+    border:3px solid #6b3d20;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 12px rgba(59,33,20,.25);
+}
+
+.foto-producto{
+    width:40%;
+    min-height:210px;
+}
+
+.foto-producto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.informacion{
+    width:60%;
+    padding:22px;
+}
+
+.informacion h2{
+    font-family:Georgia,serif;
+    font-size:25px;
+    margin-top:15px;
+}
+
+.estado{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:15px;
+    font-size:12px;
+    font-weight:bold;
+    background:#d8ead1;
+    color:#285c27;
+}
+
+footer{
+    text-align:center;
+    background:#4b2818;
+    color:#f8dfaa;
+    padding:30px 15px;
+    margin-top:35px;
+}
+
+footer h2{
+    font-family:Georgia,serif;
+    font-size:28px;
+    margin:8px 0;
+}
+
+@media(max-width:600px){
+
+    .encabezado h1{
+        font-size:38px;
+    }
+
+    .producto{
+        display:block;
+    }
+
+    .foto-producto{
+        width:100%;
+        height:230px;
+        min-height:0;
+    }
+
+    .informacion{
+        width:100%;
+        padding:18px;
+    }
+
+    .informacion h2{
+        font-size:22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="encabezado">
+
+    <div class="logo-yegua">🐎</div>
+
+    <h1>LA YEGUA</h1>
+
+    <p>Sabores con espíritu vaquero 🤠</p>
+
+</header>
+
+
+<nav class="categorias">
+
+    <button onclick="mostrarCategoria('todos')">TODO</button>
+    <button onclick="mostrarCategoria('comida')">COMIDA</button>
+    <button onclick="mostrarCategoria('bebidas')">BEBIDAS</button>
+    <button onclick="mostrarCategoria('postres')">POSTRES</button>
+
+</nav>
+
+
+<main class="menu">
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/pato.jpg" alt="Pato asado">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Pato Asado</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/chancho.jpg" alt="Chancho al horno">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Chancho al Horno</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/locro.jpg" alt="Locro de gallina criolla">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Locro de Gallina Criolla</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/hamburguesa.jpg" alt="Hamburguesa">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Hamburguesa</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/lomito.jpg" alt="Sándwich de lomito">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Sándwich de Lomito</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/surtidos.jpg" alt="Surtidos en tablita">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Surtidos en Tablita</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/masaco.jpg" alt="Masaco">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Masaco</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/lomo-montado.jpg" alt="Lomo montado">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Lomo Montado</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/chicharron.jpg" alt="Chicharrón de pollo">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Chicharrón de Pollo</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/jolker.jpg" alt="Jolker">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Jolker</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/aji-panza.jpg" alt="Ají de panza">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Ají de Panza</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/pacu.jpg" alt="Pacu frito">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Pacu Frito</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/sopa-mani.jpg" alt="Sopa de maní">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Sopa de Maní</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/picante.jpg" alt="Picante">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Picante</h2>
+</div>
+</section>
+
+
+<section class="producto postres">
+<div class="foto-producto">
+<img src="img/rollo-canela.jpg" alt="Rollo de canela">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Rollo de Canela</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/rollo-queso.jpg" alt="Rollo de queso">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Rollo de Queso</h2>
+</div>
+</section>
+
+
+<section class="producto comida">
+<div class="foto-producto">
+<img src="img/rollo-pollo.jpg" alt="Rollo de pollo">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Rollo de Pollo</h2>
+</div>
+</section>
+
+
+<section class="producto bebidas">
+<div class="foto-producto">
+<img src="img/frappe-oreo.jpg" alt="Frappé de Oreo">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Frappé de Oreo</h2>
+</div>
+</section>
+
+
+<section class="producto bebidas">
+<div class="foto-producto">
+<img src="img/para-para.jpg" alt="Para Para">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Para Para</h2>
+</div>
+</section>
+
+
+<section class="producto postres">
+<div class="foto-producto">
+<img src="img/torta-chocolate.jpg" alt="Torta de chocolate">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Torta de Chocolate</h2>
+</div>
+</section>
+
+
+<section class="producto postres">
+<div class="foto-producto">
+<img src="img/mousse-maracuya.jpg" alt="Mousse de maracuyá">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Mousse de Maracuyá</h2>
+</div>
+</section>
+
+<section class="producto bebidas">
+<div class="foto-producto">
+<img src="img/frappe-frutilla.jpg" alt="Frappé de Frutilla">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Frappé de Frutilla</h2>
+</div>
+</section>
+
+<section class="producto bebidas">
+<div class="foto-producto">
+<img src="img/frappuccino.jpg" alt="Frappuccino">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Frappuccino</h2>
+</div>
+</section>
+
+<section class="producto postres">
+<div class="foto-producto">
+<img src="img/fresas-crema.jpg" alt="Fresas con Crema">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Fresas con Crema</h2>
+</div>
+</section>
+
+<section class="producto postres">
+<div class="foto-producto">
+<img src="img/torta-chocolate-frutilla.jpg" alt="Torta de Chocolate Rellena con Crema y Frutilla">
+</div>
+<div class="informacion">
+<span class="estado">DISPONIBLE</span>
+<h2>Torta de Chocolate Rellena con Crema y Frutilla</h2>
+</div>
+</section>
+</main>
+
+
+<footer>
+
+<div>★ 🤠 ★</div>
+
+<h2>LA YEGUA 🐎</h2>
+
+<p>Gracias por visitarnos</p>
+
+</footer>
+
+
+<script>
+
+function mostrarCategoria(categoria){
+
+const productos=document.querySelectorAll('.producto');
+
+productos.forEach(function(producto){
+
+if(categoria==='todos'){
+
+producto.style.display='flex';
+
+}
+
+else if(producto.classList.contains(categoria)){
+
+producto.style.display='flex';
+
+}
+
+else{
+
+producto.style.display='none';
+
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
+```
